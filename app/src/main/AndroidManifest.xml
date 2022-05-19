@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.onlinemachenic">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.OnlineMachenic">
+        <activity android:name=".activities.admin.AllRegisteredMechanicsActivity"></activity>
+        <activity android:name=".activities.admin.AdminDashboardActivity" />
+        <activity android:name=".activities.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.mechanic.EditProfileActivity" />
+        <activity android:name=".activities.user.EditProfileActivity" />
+        <activity android:name=".activities.user.QRCodeActivity" />
+        <activity android:name=".activities.user.AllMechanicsActivity" />
+        <activity android:name=".activities.user.HireMechanicActivity" />
+        <activity android:name=".activities.user.MechanicDetailsActivity" />
+        <activity android:name=".activities.user.RecentHiredActivity" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".activities.mechanic.MechanicDetailedMapActivity"
+            android:label="@string/title_activity_mechanic_detailed_map" />
+        <activity
+            android:name=".activities.user.DetailedMapActivity"
+            android:label="@string/title_activity_detailed_map" />
+        <activity android:name=".activities.mechanic.FeedbacksActivity" />
+        <activity
+            android:name=".activities.mechanic.MechanicMapsActivity"
+            android:label="@string/title_activity_mechanic_maps" />
+        <activity android:name=".activities.mechanic.PendingRequestsActivity" />
+        <activity android:name=".activities.mechanic.MechanicSignUpActivity" />
+        <activity android:name=".activities.user.UserSignUpActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.user.UserDashboardActivity" />
+        <activity android:name=".activities.mechanic.MechanicDashboardActivity" />
+        <activity
+            android:name=".activities.user.UserMapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation" />
+
+        <service
+            android:name=".services.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

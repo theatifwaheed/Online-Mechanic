@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nested_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingBottom="20dp"
+    android:scrollbars="none"
+    android:scrollingCache="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.user.UserDashboardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="15dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentInsetStartWithNavigation="0dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <include layout="@layout/header"
+
+                />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_mlarge"
+            android:layout_marginTop="@dimen/spacing_mlarge"
+            android:layout_marginRight="@dimen/spacing_mlarge"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/exo2_bold"
+                android:gravity="center"
+                android:text="User Dashboard"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_mlarge" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_margin="@dimen/spacing_mlarge"
+            android:background="@color/lime_200" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_smlarge"
+                android:layout_marginRight="@dimen/spacing_smlarge"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="hireMechanic"
+                    app:cardBackgroundColor="@color/purple_200"
+                    app:cardCornerRadius="12dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.1"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_reflection"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:id="@+id/all_requests_tv"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="2dp"
+                            android:drawablePadding="4dp"
+                            android:gravity="center"
+                            android:text="Hire a Mechanic"
+                            android:textColor="@color/purple_500"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+<!--                <View-->
+<!--                    android:layout_width="@dimen/spacing_middle"-->
+<!--                    android:layout_height="0dp" />-->
+
+                <!--                <androidx.cardview.widget.CardView-->
+                <!--                    android:id="@+id/cardView"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="100dp"-->
+
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:clickable="true"-->
+                <!--                    android:foreground="?android:attr/selectableItemBackgroundBorderless"-->
+                <!--                    android:onClick="viewRecords"-->
+                <!--                    app:cardBackgroundColor="@color/purple_200"-->
+                <!--                    app:cardCornerRadius="12dp">-->
+
+                <!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="match_parent">-->
+
+                <!--                        <ImageView-->
+                <!--                            android:layout_width="0dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:alpha="0.1"-->
+                <!--                            android:scaleType="fitXY"-->
+                <!--                            android:src="@drawable/ic_reflection"-->
+                <!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                            app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                            app:layout_constraintStart_toStartOf="parent"-->
+                <!--                            app:layout_constraintTop_toTopOf="parent" />-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="0dp"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_marginStart="8dp"-->
+                <!--                            android:layout_marginTop="2dp"-->
+
+                <!--                            android:drawablePadding="4dp"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:text="View Records"-->
+                <!--                            android:textColor="@color/purple_500"-->
+                <!--                            android:textSize="16sp"-->
+                <!--                            android:textStyle="bold"-->
+                <!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                            app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                            app:layout_constraintStart_toStartOf="parent"-->
+                <!--                            app:layout_constraintTop_toTopOf="parent" />-->
+
+                <!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
+                <!--                </androidx.cardview.widget.CardView>-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_smlarge"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_smlarge"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView1"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="recentHires"
+                    app:cardBackgroundColor="@color/purple_200"
+                    app:cardCornerRadius="12dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.1"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_reflection"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="2dp"
+
+                            android:drawablePadding="4dp"
+                            android:gravity="center"
+                            android:text="Recent Hires"
+                            android:textColor="@color/purple_500"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_smlarge"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_smlarge"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView1"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="editProfile"
+                    app:cardBackgroundColor="@color/purple_200"
+                    app:cardCornerRadius="12dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.1"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_reflection"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="2dp"
+
+                            android:drawablePadding="4dp"
+                            android:gravity="center"
+                            android:text="Edit Profile"
+                            android:textColor="@color/purple_500"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_smlarge"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_smlarge"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView1"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="logoutMe"
+                    app:cardBackgroundColor="@color/purple_200"
+                    app:cardCornerRadius="12dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.1"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_reflection"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="2dp"
+
+                            android:drawablePadding="4dp"
+                            android:gravity="center"
+                            android:text="Logout"
+                            android:textColor="@color/purple_500"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+            <!--        <LinearLayout-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_marginLeft="@dimen/spacing_smlarge"-->
+            <!--            android:layout_marginTop="@dimen/spacing_large"-->
+            <!--            android:layout_marginRight="@dimen/spacing_smlarge"-->
+            <!--            android:gravity="center"-->
+            <!--            android:orientation="horizontal">-->
+
+
+            <!--            <View-->
+            <!--                android:layout_weight="0.5"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="0dp" />-->
+
+            <!--            <androidx.cardview.widget.CardView-->
+            <!--                android:id="@+id/cardView5"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="100dp"-->
+
+            <!--                android:layout_weight="1"-->
+            <!--                android:clickable="true"-->
+            <!--                android:foreground="?android:attr/selectableItemBackgroundBorderless"-->
+            <!--                android:onClick="logout"-->
+            <!--                app:cardBackgroundColor="@color/purple_200"-->
+            <!--                app:cardCornerRadius="12dp">-->
+
+            <!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent">-->
+
+            <!--                    <ImageView-->
+            <!--                        android:layout_width="0dp"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:alpha="0.1"-->
+            <!--                        android:scaleType="fitXY"-->
+            <!--                        android:src="@drawable/ic_reflection"-->
+            <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                        app:layout_constraintStart_toStartOf="parent"-->
+            <!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+            <!--                    <TextView-->
+            <!--                        android:layout_width="0dp"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_marginStart="8dp"-->
+            <!--                        android:layout_marginTop="2dp"-->
+
+            <!--                        android:drawablePadding="4dp"-->
+            <!--                        android:gravity="center"-->
+            <!--                        android:text="Logout"-->
+            <!--                        android:textColor="@color/purple_500"-->
+            <!--                        android:textSize="16sp"-->
+            <!--                        android:textStyle="bold"-->
+            <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                        app:layout_constraintStart_toStartOf="parent"-->
+            <!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+            <!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+            <!--            </androidx.cardview.widget.CardView>-->
+
+            <!--            <View-->
+            <!--                android:layout_weight="0.5"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="0dp" />-->
+
+
+            <!--        </LinearLayout>-->
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

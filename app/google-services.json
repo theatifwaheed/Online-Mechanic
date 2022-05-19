@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "410072844917",
+    "firebase_url": "https://maps-1556253347219-default-rtdb.firebaseio.com",
+    "project_id": "maps-1556253347219",
+    "storage_bucket": "maps-1556253347219.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410072844917:android:e78468d0d44846c927c63c",
+        "android_client_info": {
+          "package_name": "com.onlinemachenic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "410072844917-vsppl8k4t68tmnbnjqaq1doa8hh941ot.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ2pVIHFXsu8RQfp5yO2Fn1jGFRYCmY4k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "410072844917-vsppl8k4t68tmnbnjqaq1doa8hh941ot.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410072844917:android:3e91b78daba7f12427c63c",
+        "android_client_info": {
+          "package_name": "com.onlinemachenic.activities"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "410072844917-vsppl8k4t68tmnbnjqaq1doa8hh941ot.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ2pVIHFXsu8RQfp5yO2Fn1jGFRYCmY4k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "410072844917-vsppl8k4t68tmnbnjqaq1doa8hh941ot.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
